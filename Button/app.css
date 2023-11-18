@@ -16,17 +16,19 @@ body {
 .box {
     position: relative;
     width: 500px;
-    height: 450px;
+    height: 550px;
     background-color: #1C1C1C;
     border-radius: 28px;
     overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .box::before {
     content: "";
     position: absolute;
     width: 500px;
-    height: 450px;
+    height: 550px;
     background: linear-gradient(112.1deg, palegreen 11.4%, palegreen 70.2%);
     top: -50%;
     left: -50%;
@@ -38,7 +40,7 @@ body {
     content: "";
     position: absolute;
     width: 500px;
-    height: 450px;
+    height: 550px;
     background: linear-gradient(112.1deg, palegreen 11.4%, palegreen.2%);
     top: -50%;
     left: -50%;
@@ -49,11 +51,11 @@ body {
 
 @keyframes animate {
     0% {
-        transform: rotate(20deg);
+        transform: rotate(0deg);
     }
 
     100% {
-        transform: rotate(380deg);
+        transform: rotate(360deg);
     }
 
 }
@@ -81,6 +83,7 @@ body {
     position: relative;
     width: 99.8%;
     margin-top: 35px;
+    color: white;
 }
 
 .inputBox input{
@@ -89,15 +92,27 @@ body {
     padding: 20px 10px 10px;
     background-color: transparent;
     border: 2px solid rgba(32, 38, 57.0.9); 
-    box-shadow: 2px 2px 5px paleturquoise
+    box-shadow: inset 2px 2px 5px #C7DCA7;
     outline: none;
-    color: #23242a;
+    color: #ffffff;
     font-size: 1.3em;
     caret-color: paleturquoise;
     letter-spacing: 1px;
+
+}
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+.links a{
+    color: aquamarine;
+    font-size: 0.85em;
+    margin: 10px 0px;
+    text-decoration: none !important;
 }
 .links a:hover{
-    color: paleturquoise !important;
+    color: greenyellow !important;
+    text-decoration: underline !important;
 }
 .links .pass{
     position: relative;
@@ -109,4 +124,33 @@ body {
     padding:20px 40px 20px 40px ;
    
 }   
+
+.inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background:palegreen;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.8s;
+    pointer-events: none;
+    z-index: 10;
+}
+
+
+input[type="submit"]{
+    border: none;
+    outline: none;
+    padding: 4px 25px;
+   
+    font-weight: 600;
+    width: 50%;
+    height: 50%;
+    margin-top: 20px;
+    background-color: palegreen
+}
+
+
     
